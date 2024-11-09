@@ -1,22 +1,26 @@
-cards = []
-let sum = 0
-let hasBlackJack = false
-let message = ""
-let messageEl = document.getElementById("message-el")
-let cardEl = document.getElementById("cards-el")
-let sumEl = document.getElementById("sum-el")
-isAlive = false
-hasBlackJack = false
-
-
 let player = {
     name: "Players Balance",
     chips: 5
 }
 
+cards = []
+let sum = 6
+let hasBlackJack = false
+let message = ""
+let messageEl = document.getElementById("message-el")
+let cardEl = document.getElementById("cards-el")
+let sumEl = document.getElementById("sum-el")
 let playerEl = document.getElementById("player-el")
-playerEl.textContent = player.name + ": " + "$" + player.chips
+isAlive = false
+hasBlackJack = false
 
+
+
+
+
+
+
+playerEl.textContent = player.name + ": " + "$" + player.chips
 
 
 
