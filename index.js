@@ -14,15 +14,7 @@ let playerEl = document.getElementById("player-el")
 isAlive = false
 hasBlackJack = false
 
-
-
-
-
-
-
 playerEl.textContent = player.name + ": " + "$" + player.chips
-
-
 
 function getRandomCard() {
      
@@ -75,19 +67,17 @@ function renderGame() {
     messageEl.textContent = message
 }
 
-
-function thirdCard() {
-    
-        if ( player.chips && isAlive && !hasBlackJack) {
-            let card = getRandomCard()
-            sum +=  card
-            cards.push(card)
-            player.chips -= 2
-            playerEl.textContent = player.name + ": " + "$" + player.chips
-            renderGame()
-        } else {
-            message = "You don't have enough chips to draw a new card!"
-        }
+function thirdCard() {  
+    if (player.chips && isAlive && !hasBlackJack) {
+        let card = getRandomCard()
+        sum +=  card
+        cards.push(card)
+        player.chips -= 2
+        playerEl.textContent = `${player.name}  $${player.chips}`
+        renderGame()
+    } else {
+        message = "You don't have enough chips to draw a new card!"
+    }
 
     
 }
