@@ -1,6 +1,6 @@
 let player = {
     name: "Players Balance",
-    chips: 5
+    chips: 20
 }
 
 cards = []
@@ -56,7 +56,7 @@ function renderGame() {
         hasBlackJack = true
         isAlive = true
         player.chips += 50
-        playerEl.textContent = player.name + ": " + "$" + player.chips
+        playerEl.textContent = `${player.name}  $${player.chips}`
     } else {
         message = "You're out of the game!" 
         isAlive = false
